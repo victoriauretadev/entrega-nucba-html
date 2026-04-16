@@ -1531,3 +1531,16 @@ body {
   color: rgba(237, 237, 237, 0.6);
   letter-spacing: 0.5px;
 }
+
+
+@media (max-width:1200px) {
+  .quienes-somos{
+    gap:30px;
+    padding:100px 20px;
+  }
+
+  #quienes-web h2{
+    font-size:32px;
+  }
+}
+
