@@ -2086,5 +2086,9 @@ body {
     .tech-logos img {
       height: 50px;
     }
+
+    .hamburger-toggle {
+  display: none !important;
+}
   }
 }
