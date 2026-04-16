@@ -1548,6 +1548,27 @@ body {
   #quienes-web h2{
     font-size:32px;
   }
+
+  .web-design-wrapper,
+  .boost-wrapper,
+  .contact-wrapper{
+    grid-template-columns: 1fr;
+  }
+
+  .features-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid{
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .stat-item{
+    border-right: none;
+    border-bottom: 1px solid var(--color-primary);
+    padding: var(--spacing-lg);
+  }
 }
 
 
