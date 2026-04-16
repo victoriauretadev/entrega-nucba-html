@@ -1522,6 +1522,10 @@ body {
   letter-spacing: 0.5px;
 }
 
+.hamburger-toggle {
+  display: none !important;
+}
+
 /* ===================================
    RESPONSIVE
    =================================== */
@@ -1953,242 +1957,242 @@ body {
    RESPONSIVE - HAMBURGUESA Y MÓVIL
    =================================== */
 
-@media (max-width: 1024px) {
-  .hamburger-toggle {
-    display: none !important;
+  @media (max-width: 1024px) {
+    .hamburger-toggle {
+      display: none !important;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      background: none;
+      border: none;
+      cursor: pointer;
+      gap: 5px;
+      padding: 0;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-light);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+      background-color: var(--color-primary);
+    }
+
+    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+      background-color: var(--color-primary);
+    }
+
+    .auth-buttons {
+      display: none;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: var(--color-dark);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      z-index: 999;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    .hamburger-toggle:checked ~ .navbar {
+      max-height: 600px;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      gap: 0;
+      padding: 20px;
+      list-style: none;
+      width: 100%;
+    }
+
+    .nav-menu li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu a {
+      display: block;
+      font-size: 15px;
+      padding: 15px 0;
+      text-decoration: none;
+      color: var(--color-light);
+    }
+
+    .nav-menu a::after {
+      display: none;
+    }
+
+    .nav-menu a:hover {
+      color: var(--color-primary);
+      padding-left: 10px;
+    }
+
+    .auth-buthons-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      padding: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .auth-buthons-mobile .btn-login,
+    .auth-buthons-mobile .btn-register {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 13px;
+    }
   }
 
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    gap: 5px;
-    padding: 0;
-    z-index: 1001;
+  @media (max-width: 768px) {
+    .hero {
+      padding: 140px 20px var(--spacing-xl);
+    }
+
+    .hero h1 {
+      font-size: 28px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+    }
+
+    .section-title h2,
+    .why-title h2 {
+      font-size: 24px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .features-grid,
+    .benefits-grid,
+    .platforms-grid,
+    .cards-column {
+      grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+      font-size: 24px;
+    }
+
+    .quienes-somos {
+      flex-direction: column;
+      gap: 30px;
+      padding: 60px 20px;
+    }
+
+    .web-design-info h2,
+    .boost-info h2 {
+      font-size: 20px;
+    }
+
+    .contact-content h2 {
+      font-size: 24px;
+    }
   }
 
-  .hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-light);
-    border-radius: 2px;
-    transition: var(--transition);
-  }
+  @media (max-width: 480px) {
+    .logo img {
+      width: 140px;
+    }
 
-  .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
-    background-color: var(--color-primary);
-  }
+    .hamburger-line {
+      width: 22px;
+      height: 2.5px;
+    }
 
-  .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
+    .navbar {
+      top: 65px;
+    }
 
-  .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-    background-color: var(--color-primary);
-  }
+    .hamburger-toggle:checked ~ .navbar {
+      max-height: 450px;
+    }
 
-  .auth-buttons {
-    display: none;
-  }
+    .nav-menu {
+      padding: 15px;
+    }
 
-  .navbar {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: var(--color-dark);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    z-index: 999;
-    margin: 0;
-    flex-direction: column;
-  }
+    .nav-menu a {
+      font-size: 13px;
+      padding: 12px 0;
+    }
 
-  .hamburger-toggle:checked ~ .navbar {
-    max-height: 600px;
-  }
+    .auth-buthons-mobile {
+      padding: 10px;
+      gap: var(--spacing-sm);
+    }
 
-  .nav-menu {
-    flex-direction: column;
-    gap: 0;
-    padding: 20px;
-    list-style: none;
-    width: 100%;
-  }
+    .auth-buthons-mobile .btn-login,
+    .auth-buthons-mobile .btn-register {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 11px;
+    }
 
-  .nav-menu li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    margin: 0;
-    padding: 0;
-  }
+    .hero {
+      padding: 120px 20px var(--spacing-lg);
+    }
 
-  .nav-menu a {
-    display: block;
-    font-size: 15px;
-    padding: 15px 0;
-    text-decoration: none;
-    color: var(--color-light);
-  }
+    .hero h1 {
+      font-size: 22px;
+    }
 
-  .nav-menu a::after {
-    display: none;
-  }
+    .hero-subtitle {
+      font-size: 13px;
+    }
 
-  .nav-menu a:hover {
-    color: var(--color-primary);
-    padding-left: 10px;
-  }
+    .badge {
+      font-size: 12px;
+      padding: 8px 20px;
+    }
 
-  .auth-buthons-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
+    .section-title h2 {
+      font-size: 20px;
+    }
 
-  .auth-buthons-mobile .btn-login,
-  .auth-buthons-mobile .btn-register {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 13px;
-  }
-}
+    .btn {
+      font-size: 12px;
+      padding: 10px 20px;
+    }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 140px 20px var(--spacing-xl);
-  }
+    .tech-logos {
+      gap: var(--spacing-lg);
+    }
 
-  .hero h1 {
-    font-size: 28px;
+    .tech-logos img {
+      height: 50px;
+    }
   }
-
-  .hero-subtitle {
-    font-size: 14px;
-  }
-
-  .section-title h2,
-  .why-title h2 {
-    font-size: 24px;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-  }
-
-  .cta-buttons .btn {
-    width: 100%;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .features-grid,
-  .benefits-grid,
-  .platforms-grid,
-  .cards-column {
-    grid-template-columns: 1fr;
-  }
-
-  .section-heading {
-    font-size: 24px;
-  }
-
-  .quienes-somos {
-    flex-direction: column;
-    gap: 30px;
-    padding: 60px 20px;
-  }
-
-  .web-design-info h2,
-  .boost-info h2 {
-    font-size: 20px;
-  }
-
-  .contact-content h2 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo img {
-    width: 140px;
-  }
-
-  .hamburger-line {
-    width: 22px;
-    height: 2.5px;
-  }
-
-  .navbar {
-    top: 65px;
-  }
-
-  .hamburger-toggle:checked ~ .navbar {
-    max-height: 450px;
-  }
-
-  .nav-menu {
-    padding: 15px;
-  }
-
-  .nav-menu a {
-    font-size: 13px;
-    padding: 12px 0;
-  }
-
-  .auth-buthons-mobile {
-    padding: 10px;
-    gap: var(--spacing-sm);
-  }
-
-  .auth-buthons-mobile .btn-login,
-  .auth-buthons-mobile .btn-register {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 11px;
-  }
-
-  .hero {
-    padding: 120px 20px var(--spacing-lg);
-  }
-
-  .hero h1 {
-    font-size: 22px;
-  }
-
-  .hero-subtitle {
-    font-size: 13px;
-  }
-
-  .badge {
-    font-size: 12px;
-    padding: 8px 20px;
-  }
-
-  .section-title h2 {
-    font-size: 20px;
-  }
-
-  .btn {
-    font-size: 12px;
-    padding: 10px 20px;
-  }
-
-  .tech-logos {
-    gap: var(--spacing-lg);
-  }
-
-  .tech-logos img {
-    height: 50px;
-  }
-}
 }
