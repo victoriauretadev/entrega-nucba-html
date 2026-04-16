@@ -1791,118 +1791,96 @@ body {
     -o-border-radius: 6px;
   }
 
-  /* ===================================
-   MENU HAMBURGUESA
-   =================================== */
+  @media (max-width: 1200px) {
+    .quienes-somos {
+      gap: 30px;
+      padding: 100px 20px;
+    }
 
-  .loo img {
-    width: 150px;
-  }
+    #quienes-web h2 {
+      font-size: 32px;
+    }
 
-  .hero {
-    padding: 120px 20px var(--spacing-lg);
-    min-height: auto;
-  }
+    .web-design-wrapper,
+    .boost-wrapper,
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
 
-  .hero h1 {
-    font-size: 22px;
-  }
+    .features-layout {
+      grid-template-columns: 1fr;
+    }
 
-  .hero-subtitle {
-    font-size: 13px;
-  }
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
 
-  .badge {
-    font-size: 12px;
-    padding: 8px 20px;
-  }
-
-  .section-title h2 {
-    font-size: 20px;
-  }
-
-  .web-design-info h2,
-  .boost-info h2 {
-    font-size: 20px;
-  }
-
-  .contact-content h2 {
-    font-size: 24px;
-  }
-
-  .btn {
-    font-size: 12px;
-    padding: 10px 20px;
-  }
-
-  .feature-icon,
-  .benefit-icon,
-  .card-icon,
-  .plataform-icon {
-    width: 40%px !important;
-    height: 40px !important;
-  }
-
-  .tech-logos {
-    gap: var(--spacing-lg);
-  }
-
-  .tech-logos img {
-    height: 50px;
-  }
-
-  /* ===================================
-   MENU HAMBURGUESA
-   =================================== */
-
-  .hamburger-toggle {
-    display: none;
-  }
-
-  .hamburger {
-    display: none;
-    flex-direction: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    gap: 5px;
-    padding: 0;
-    z-index: 1001;
-  }
-
-  .hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-light);
-    border-radius: 2px;
-    transition: var(--transition);
-  }
-
-  .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
-    background-color: var(--color-primary);
-  }
-
-  .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-    background-color: var(--color-primary);
-  }
-
-  /* ===================================
-   NAVBAR RESPONSIVE
-   =================================== */
-
-  .auth-buttons-mobile {
-    display: none;
+    .stat-item {
+      border-right: none;
+      border-bottom: 1px solid var(--color-primary);
+      padding: var(--spacing-lg);
+    }
   }
 
   @media (max-width: 1024px) {
+    .quienes-somos {
+      flex-direction: column;
+      gap: 40px;
+      padding: 80px 20px;
+    }
+
+    #text-quienes-somos {
+      width: 100%;
+    }
+
+    #img-quienes-somos {
+      width: 100%;
+    }
+
+    #quienes-web h2 {
+      font-size: 32px;
+    }
+
+    #img-quienes-somos img {
+      animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===================================
+     MENU HAMBURGUESA (1024px y menos)
+     =================================== */
+
     .hamburger {
       display: flex;
+      flex-direction: column;
+      background: none;
+      border: none;
+      cursor: pointer;
+      gap: 5px;
+      padding: 0;
+      z-index: 1001;
+    }
+
+    .hamburger-line {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-light);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+      background-color: var(--color-primary);
+    }
+
+    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+      background-color: var(--color-primary);
     }
 
     .auth-buttons {
@@ -1935,7 +1913,6 @@ body {
 
     .nav-menu li {
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 0;
     }
 
     .nav-menu a {
@@ -1956,7 +1933,7 @@ body {
       padding-left: 10px;
     }
 
-    .auth-buttons-mobile {
+    .auth-buthons-mobile {
       display: flex;
       flex-direction: column;
       gap: var(--spacing-md);
@@ -1964,40 +1941,76 @@ body {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .auth-buttons-mobile .btn-login,
-    .auth-buttons-mobile .btn-register {
+    .auth-buthons-mobile .btn-login,
+    .auth-buthons-mobile .btn-register {
       width: 100%;
       padding: 12px 20px;
       font-size: 13px;
-      border-radius: var(--radius-lg);
     }
   }
 
   @media (max-width: 768px) {
+    .header-container {
+      padding: 0 15px;
+    }
+
     .logo img {
       width: 180px;
     }
 
-    .navbar {
-      top: 70px;
+    .hero {
+      padding: 140px 20px var(--spacing-xl);
     }
 
-    .hamburger-toggle:checked ~ .navbar {
-      max-height: 550px;
+    .hero h1 {
+      font-size: 28px;
     }
 
-    .nav menu a {
+    .hero-subtitle {
       font-size: 14px;
     }
 
-    .auth-buttons-mobile {
-      padding: 15px;
+    .section-title h2,
+    .why-title h2 {
+      font-size: 24px;
     }
 
-    .auth-buttons-mobile .btn-login,
-    .auth-buttons-mobile .btn-register {
-      padding: 11px 18px;
-      font-size: 12px;
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .features-grid,
+    .benefits-grid,
+    .platforms-grid,
+    .cards-column {
+      grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+      font-size: 24px;
+    }
+
+    .quienes-somos {
+      flex-direction: column;
+      gap: 30px;
+      padding: 60px 20px;
+    }
+
+    .web-design-info h2,
+    .boost-info h2 {
+      font-size: 20px;
+    }
+
+    .contact-content h2 {
+      font-size: 24px;
     }
   }
 
@@ -2025,19 +2038,53 @@ body {
 
     .nav-menu a {
       font-size: 13px;
-      padding: 12px 0px;
+      padding: 12px 0;
     }
 
-    .auth-buttons-mobile {
+    .auth-buthons-mobile {
       padding: 10px;
       gap: var(--spacing-sm);
     }
 
-    .auth-buttons-mobile .btn-login,
-    .auth-buttons-mobile .btn-register {
+    .auth-buthons-mobile .btn-login,
+    .auth-buthons-mobile .btn-register {
       width: 100%;
       padding: 10px 15px;
       font-size: 11px;
+    }
+
+    .hero {
+      padding: 120px 20px var(--spacing-lg);
+    }
+
+    .hero h1 {
+      font-size: 22px;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
+    }
+
+    .badge {
+      font-size: 12px;
+      padding: 8px 20px;
+    }
+
+    .section-title h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      font-size: 12px;
+      padding: 10px 20px;
+    }
+
+    .tech-logos {
+      gap: var(--spacing-lg);
+    }
+
+    .tech-logos img {
+      height: 50px;
     }
   }
 }
