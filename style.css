@@ -1578,4 +1578,58 @@ body {
 
 
 
+@media (max-width:768px) {
+  .quienes-somos{
+    flex-direction: column;
+    gap:30px;
+    padding: 60px 20px;
+  }
 
+  .quienes-somos::before{
+    width: 300px;
+    height: 300px;
+    top:-100px;
+    right: -100px;;
+  }
+
+  .quienes-somos::after{
+    width: 250px;
+    height: 250px;
+    bottom:-100px;
+    left: -100px;
+  }
+
+  #text-quienes-somos{
+    width: 100%;
+    gap:25px;
+  }
+
+  #quienes-code{
+    gap:10px;
+  }
+
+  #queines-code img{
+    width: 50px;
+  }
+
+  #quienes-code h2{
+    font-size:14px;
+  }
+
+  #quienes-web h2{
+    font-size:28px;
+  }
+
+  #quienes-web p{
+    font-size: 14px
+  }
+
+  #img-quienes-somos{
+    width: 100%;
+  }
+
+  #button-web{
+    padding: 11px 24px;
+    font-size: 12px;
+  }
+}
