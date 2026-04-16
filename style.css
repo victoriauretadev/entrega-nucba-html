@@ -1980,4 +1980,37 @@ body {
 
 }
 
+
+@media (max-width: 768px) {
+    .logo img{
+      width: 180px;
+    }
+    
+    .navbar{
+      top:70px;
+    }
+
+    .hamburger-toggle:checked ~ .navbar{
+      max-height: 550px;
+    }
+
+    .nav menu a{
+      font-size:14px;
+    }
+
+    .auth-buttons-mobile{
+      padding: 15px;
+    }
+
+    .auth-buttons-mobile .btn-login,
+    .auth-buttons-mobile .btn-register{
+      padding: 11px 18px;
+      font-size: 12px;
+    }
+
+    
+}
+
+
+
 }
