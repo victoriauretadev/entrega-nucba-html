@@ -1533,6 +1533,12 @@ body {
 }
 
 
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+
 @media (max-width:1200px) {
   .quienes-somos{
     gap:30px;
@@ -1543,4 +1549,33 @@ body {
     font-size:32px;
   }
 }
+
+
+@media (max-width:1024px){
+  .quienes-somos{
+    flex-direction: column;
+    gap:40px;
+    padding: 80px 20px;
+  }
+
+  #text-quienes-somos{
+    width: 100%;
+  }
+
+  #img-quienes-somos{
+    width: 100%;
+  }
+
+  #quienes-web h2{
+    font-size:32px;
+  }
+
+  #img-quienes-somos img{
+    animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+}
+
+
+
 
