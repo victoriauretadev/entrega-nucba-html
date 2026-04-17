@@ -102,10 +102,6 @@ body {
   height: auto;
   cursor: pointer;
   transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
 }
 
 .logo img:hover {
@@ -135,10 +131,6 @@ body {
   transition: var(--transition);
   display: block;
   padding: 8px 0;
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
 }
 
 .nav-menu a::after {
@@ -164,6 +156,43 @@ body {
   display: flex;
   gap: var(--spacing-lg);
   flex-shrink: 0;
+}
+
+.hamburger-toggle {
+  display: none !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-light);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+  background-color: var(--color-primary);
+}
+
+.hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+  background-color: var(--color-primary);
 }
 
 /* ===================================
@@ -195,10 +224,6 @@ body {
 
 .btn:active {
   transform: scale(0.98);
-  -webkit-transform: scale(0.98);
-  -moz-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  -o-transform: scale(0.98);
 }
 
 .btn-primary {
@@ -586,7 +611,6 @@ body {
   overflow: hidden;
 }
 
-/* Efecto de fondo decorativo */
 .quienes-somos::before {
   content: "";
   position: absolute;
@@ -717,7 +741,6 @@ body {
   font-family: var(--font-secondary);
 }
 
-/* Efecto de brillo en el botón */
 .button-web::before {
   content: "";
   position: absolute;
@@ -788,24 +811,6 @@ body {
   position: relative;
 }
 
-/* Efecto de brillo en imagen */
-#img-quienes-somos img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(163, 74, 232, 0.2) 0%,
-    transparent 50%
-  );
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 #img-quienes-somos img:hover {
   transform: scale(1.05) perspective(1000px) rotateY(2deg);
   box-shadow:
@@ -837,6 +842,17 @@ body {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1272,7 +1288,6 @@ body {
   object-fit: contain;
   filter: grayscale(100%);
   transition: var(--transition);
-  -webkit-filter: grayscale(100%);
 }
 
 .tech-logos img:hover {
@@ -1358,10 +1373,6 @@ body {
   outline: none;
   transition: var(--transition);
   letter-spacing: 0.5px;
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
 }
 
 .form-group input::placeholder,
@@ -1383,10 +1394,6 @@ body {
   min-height: 140px;
   resize: vertical;
   font-family: var(--font-secondary);
-  -webkit-border-radius: var(--radius-sm);
-  -moz-border-radius: var(--radius-sm);
-  -ms-border-radius: var(--radius-sm);
-  -o-border-radius: var(--radius-sm);
 }
 
 .form-group textarea:focus {
@@ -1423,10 +1430,6 @@ body {
   height: auto;
   cursor: pointer;
   transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
 }
 
 .footer-logo:hover {
@@ -1463,19 +1466,11 @@ body {
   font-size: 14px;
   font-weight: 200;
   transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
 }
 
 .contact-link:hover {
   color: var(--color-primary);
   transform: translateX(5px);
-  -webkit-transform: translateX(5px);
-  -moz-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  -o-transform: translateX(5px);
 }
 
 .contact-icon {
@@ -1522,24 +1517,41 @@ body {
   letter-spacing: 0.5px;
 }
 
-.hamburger-toggle {
-  display: none !important;
+/* ===================================
+   AUTH BUTTONS MOBILE
+   =================================== */
+
+.auth-buttons-mobile {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.auth-buttons-mobile a {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  font-family: var(--font-primary);
+}
+
+.auth-buttons-mobile .btn-login,
+.auth-buttons-mobile .btn-register {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 13px;
+  border: none;
 }
 
 /* ===================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
    =================================== */
 
 @media (max-width: 1200px) {
-  .quienes-somos {
-    gap: 30px;
-    padding: 100px 20px;
-  }
-
-  #quienes-web h2 {
-    font-size: 32px;
-  }
-
   .web-design-wrapper,
   .boost-wrapper,
   .contact-wrapper {
@@ -1559,6 +1571,19 @@ body {
     border-right: none;
     border-bottom: 1px solid var(--color-primary);
     padding: var(--spacing-lg);
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .quienes-somos {
+    gap: 30px;
+    padding: 100px 20px;
+  }
+
+  #quienes-web h2 {
+    font-size: 32px;
   }
 }
 
@@ -1584,35 +1609,77 @@ body {
   #img-quienes-somos img {
     animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
 
-@media (max-width: 768px) {
-  .header-container {
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
-    border: 2px solid red;
+  /* MENU RESPONSIVE - HAMBURGUESA */
+  .hamburger {
+    display: flex !important;
   }
 
   .navbar {
-    order: 3;
-    width: 100%;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 999;
     margin: 0;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger-toggle:checked ~ .navbar {
+    max-height: 700px;
+  }
+
+  .hamburger-toggle:checked ~ .navbar .auth-buttons-mobile {
+    display: flex;
   }
 
   .nav-menu {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+    list-style: none;
+    width: 100%;
+  }
+
+  .nav-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu a {
+    display: block;
+    font-size: 15px;
+    padding: 15px 0;
+    text-decoration: none;
+    color: var(--color-light);
+  }
+
+  .nav-menu a::after {
+    display: none;
+  }
+
+  .nav-menu a:hover {
+    color: var(--color-primary);
+    padding-left: 10px;
   }
 
   .auth-buttons {
-    flex-direction: column;
-    width: 100%;
-    order: 4;
+    display: none;
   }
+}
 
-  .auth-buttons .btn {
-    width: 100%;
+@media (max-width: 768px) {
+  .logo img {
+    width: 150px;
+    height: auto;
   }
 
   .hero {
@@ -1628,7 +1695,8 @@ body {
   }
 
   .section-title h2,
-  .why-title h2 {
+  .why-title h2,
+  .contact-content h2 {
     font-size: 24px;
   }
 
@@ -1653,10 +1721,6 @@ body {
 
   .section-heading {
     font-size: 24px;
-  }
-
-  .nav-menu {
-    gap: var(--spacing-lg);
   }
 
   .quienes-somos {
@@ -1684,18 +1748,6 @@ body {
     gap: 25px;
   }
 
-  #quienes-code {
-    gap: 10px;
-  }
-
-  #quienes-code img {
-    width: 50px;
-  }
-
-  #quienes-code h2 {
-    font-size: 14px;
-  }
-
   #quienes-web h2 {
     font-size: 28px;
   }
@@ -1704,17 +1756,88 @@ body {
     font-size: 14px;
   }
 
-  #img-quienes-somos {
-    width: 100%;
+  .web-design-info h2,
+  .boost-info h2 {
+    font-size: 20px;
   }
 
-  #button-web {
-    padding: 11px 24px;
-    font-size: 12px;
+  #img-quienes-somos {
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  .hamburger-line {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  .navbar {
+    top: 65px;
+  }
+
+  .hamburger-toggle:checked ~ .navbar {
+    max-height: 600px;
+  }
+
+  .nav-menu {
+    padding: 15px;
+  }
+
+  .nav-menu a {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+
+  .auth-buttons-mobile {
+    padding: 15px;
+    gap: var(--spacing-sm);
+  }
+
+  .auth-buttons-mobile a {
+    padding: 10px 15px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 120px 20px var(--spacing-lg);
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .tech-logos {
+    gap: var(--spacing-lg);
+  }
+
+  .tech-logos img {
+    height: 50px;
+  }
+
   .quienes-somos {
     flex-direction: column;
     gap: 25px;
@@ -1738,19 +1861,6 @@ body {
   #text-quienes-somos {
     width: 100%;
     gap: 20px;
-  }
-
-  #quienes-code {
-    gap: 10px;
-    margin-bottom: 5px;
-  }
-
-  #quienes-code img {
-    width: 45px;
-  }
-
-  #quienes-code h2 {
-    font-size: 13px;
   }
 
   #quienes-web h2 {
@@ -1783,417 +1893,7 @@ body {
     height: 16px;
   }
 
-  #img-quienes-somos {
-    width: 100%;
-  }
-
   #img-quienes-somos img {
     border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-  }
-
-  @media (max-width: 1200px) {
-    .quienes-somos {
-      gap: 30px;
-      padding: 100px 20px;
-    }
-
-    #quienes-web h2 {
-      font-size: 32px;
-    }
-
-    .web-design-wrapper,
-    .boost-wrapper,
-    .contact-wrapper {
-      grid-template-columns: 1fr;
-    }
-
-    .features-layout {
-      grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-lg);
-    }
-
-    .stat-item {
-      border-right: none;
-      border-bottom: 1px solid var(--color-primary);
-      padding: var(--spacing-lg);
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .quienes-somos {
-      flex-direction: column;
-      gap: 40px;
-      padding: 80px 20px;
-    }
-
-    #text-quienes-somos {
-      width: 100%;
-    }
-
-    #img-quienes-somos {
-      width: 100%;
-    }
-
-    #quienes-web h2 {
-      font-size: 32px;
-    }
-
-    #img-quienes-somos img {
-      animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* ===================================
-     MENU HAMBURGUESA (1024px y menos)
-     =================================== */
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      background: none;
-      border: none;
-      cursor: pointer;
-      gap: 5px;
-      padding: 0;
-      z-index: 1001;
-    }
-
-    .hamburger-line {
-      width: 25px;
-      height: 3px;
-      background-color: var(--color-light);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-
-    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
-      transform: rotate(45deg) translate(10px, 10px);
-      background-color: var(--color-primary);
-    }
-
-    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-      background-color: var(--color-primary);
-    }
-
-    .auth-buttons {
-      display: none;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background-color: var(--color-dark);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      z-index: 999;
-    }
-
-    .hamburger-toggle:checked ~ .navbar {
-      max-height: 600px;
-    }
-
-    .nav-menu {
-      flex-direction: column;
-      gap: 0;
-      padding: 20px;
-      list-style: none;
-    }
-
-    .nav-menu li {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .nav-menu a {
-      display: block;
-      font-size: 15px;
-      padding: 15px 0;
-      text-decoration: none;
-      color: var(--color-light);
-      transition: var(--transition);
-    }
-
-    .nav-menu a::after {
-      display: none;
-    }
-
-    .nav-menu a:hover {
-      color: var(--color-primary);
-      padding-left: 10px;
-    }
-
-    .auth-buthons-mobile {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-md);
-      padding: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .auth-buthons-mobile .btn-login,
-    .auth-buthons-mobile .btn-register {
-      width: 100%;
-      padding: 12px 20px;
-      font-size: 13px;
-    }
-  }
-
-  /* ===================================
-   RESPONSIVE - HAMBURGUESA Y MÓVIL
-   =================================== */
-
-  @media (max-width: 1024px) {
-    .hamburger-toggle {
-      display: none !important;
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      background: none;
-      border: none;
-      cursor: pointer;
-      gap: 5px;
-      padding: 0;
-      z-index: 1001;
-    }
-
-    .hamburger-line {
-      width: 25px;
-      height: 3px;
-      background-color: var(--color-light);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-
-    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
-      transform: rotate(45deg) translate(10px, 10px);
-      background-color: var(--color-primary);
-    }
-
-    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-      background-color: var(--color-primary);
-    }
-
-    .auth-buttons {
-      display: none;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background-color: var(--color-dark);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      z-index: 999;
-      margin: 0;
-      flex-direction: column;
-    }
-
-    .hamburger-toggle:checked ~ .navbar {
-      max-height: 600px;
-    }
-
-    .nav-menu {
-      flex-direction: column;
-      gap: 0;
-      padding: 20px;
-      list-style: none;
-      width: 100%;
-    }
-
-    .nav-menu li {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-menu a {
-      display: block;
-      font-size: 15px;
-      padding: 15px 0;
-      text-decoration: none;
-      color: var(--color-light);
-    }
-
-    .nav-menu a::after {
-      display: none;
-    }
-
-    .nav-menu a:hover {
-      color: var(--color-primary);
-      padding-left: 10px;
-    }
-
-    .auth-buthons-mobile {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-md);
-      padding: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .auth-buthons-mobile .btn-login,
-    .auth-buthons-mobile .btn-register {
-      width: 100%;
-      padding: 12px 20px;
-      font-size: 13px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding: 140px 20px var(--spacing-xl);
-    }
-
-    .hero h1 {
-      font-size: 28px;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-    }
-
-    .section-title h2,
-    .why-title h2 {
-      font-size: 24px;
-    }
-
-    .cta-buttons {
-      flex-direction: column;
-    }
-
-    .cta-buttons .btn {
-      width: 100%;
-    }
-
-    .form-row {
-      grid-template-columns: 1fr;
-    }
-
-    .features-grid,
-    .benefits-grid,
-    .platforms-grid,
-    .cards-column {
-      grid-template-columns: 1fr;
-    }
-
-    .section-heading {
-      font-size: 24px;
-    }
-
-    .quienes-somos {
-      flex-direction: column;
-      gap: 30px;
-      padding: 60px 20px;
-    }
-
-    .web-design-info h2,
-    .boost-info h2 {
-      font-size: 20px;
-    }
-
-    .contact-content h2 {
-      font-size: 24px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .logo img {
-      width: 187px;
-      border: 1px solid blue;
-    }
-
-    .hamburger-line {
-      width: 22px;
-      height: 2.5px;
-    }
-
-    .navbar {
-      top: 65px;
-    }
-
-    .hamburger-toggle:checked ~ .navbar {
-      max-height: 450px;
-    }
-
-    .nav-menu {
-      padding: 15px;
-    }
-
-    .nav-menu a {
-      font-size: 13px;
-      padding: 12px 0;
-    }
-
-    .auth-buthons-mobile {
-      padding: 10px;
-      gap: var(--spacing-sm);
-    }
-
-    .auth-buthons-mobile .btn-login,
-    .auth-buthons-mobile .btn-register {
-      width: 100%;
-      padding: 10px 15px;
-      font-size: 11px;
-    }
-
-    .hero {
-      padding: 120px 20px var(--spacing-lg);
-    }
-
-    .hero h1 {
-      font-size: 22px;
-    }
-
-    .hero-subtitle {
-      font-size: 13px;
-    }
-
-    .badge {
-      font-size: 12px;
-      padding: 8px 20px;
-    }
-
-    .section-title h2 {
-      font-size: 20px;
-    }
-
-    .btn {
-      font-size: 12px;
-      padding: 10px 20px;
-    }
-
-    .tech-logos {
-      gap: var(--spacing-lg);
-    }
-
-    .tech-logos img {
-      height: 50px;
-    }
   }
 }
