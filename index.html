@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="estilo.css" />
   </head>
   <body>
-    <!-- HEADER -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
-      <div class="header-container">
+      <div class="header__container">
         <div class="logo">
-          <a href="index.html" aria label="CO:DE Developer">
+          <a href="index.html" class="logo__link" aria-label="CO:DE Developer">
             <img
               src="./assets/img/logotipo/logotipo-code-horizonta-sin-fondo.png"
               alt="CO:DE Logo"
+              class="logo__img"
             />
           </a>
         </div>
@@ -26,47 +27,50 @@
         <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle" />
 
         <label for="hamburger-toggle" class="hamburger">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"> </span>
-          <span class="hamburger-line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
         </label>
 
         <nav class="navbar">
           <ul class="nav-menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#quienes-somos">Quienes Somos</a></li>
-            <li><a href="#soluciones">Soluciones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li class="nav-menu__item">
+              <a href="#inicio" class="nav-menu__link">Inicio</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#quienes-somos" class="nav-menu__link">Quienes Somos</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#soluciones" class="nav-menu__link">Soluciones</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#contacto" class="nav-menu__link">Contacto</a>
+            </li>
           </ul>
 
-          <!-- AUTH BUTTONS MOBILE DENTRO DEL NAVBAR -->
           <div class="auth-buttons-mobile">
-            <a href="./login.html" class="btn btn-login">Login</a>
-            <a href="./register.html" class="btn btn-register">Register</a>
+            <a href="./login.html" class="btn btn--login">Login</a>
+            <a href="./register.html" class="btn btn--register">Register</a>
           </div>
         </nav>
 
-        <!-- AUTH BUTTONS DESKTOP -->
         <div class="auth-buttons">
-          <button class="btn btn-login">
-            <a href="./login.html">Login</a>
-          </button>
-          <button class="btn btn-register">
-            <a href="./register.html">Register</a>
-          </button>
+          <a href="./login.html" class="btn btn--login">Login</a>
+          <a href="./register.html" class="btn btn--register">Register</a>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- HERO SECTION -->
-
+      <!-- ===== HERO SECTION ===== -->
       <section class="hero" id="inicio">
         <div class="container">
-          <div class="hero-content">
-            <span class="badge">CO:DE Argentina</span>
-            <h1>Digitalizamos tu <span class="text-primary">Negocio</span></h1>
-            <p class="hero-subtitle">
+          <div class="hero__content">
+            <span class="hero__badge">CO:DE Argentina</span>
+            <h1 class="hero__title">
+              Digitalizamos tu <span class="text-primary">Negocio</span>
+            </h1>
+            <p class="hero__subtitle">
               Sitios web profesionales, tiendas online optimizadas y estrategias
               publicitarias diseñadas para convertir visitas en clientes reales
             </p>
@@ -74,7 +78,7 @@
             <div class="features-grid">
               <div class="feature-card">
                 <svg
-                  class="feature-icon"
+                  class="feature-card__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
                   height="48"
@@ -92,8 +96,8 @@
                   />
                   <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
                 </svg>
-                <h3>Resultados Reales</h3>
-                <p>
+                <h3 class="feature-card__title">Resultados Reales</h3>
+                <p class="feature-card__text">
                   +450 proyectos completados y +250 clientes que confían en
                   nosotros
                 </p>
@@ -101,7 +105,7 @@
 
               <div class="feature-card">
                 <svg
-                  class="feature-icon"
+                  class="feature-card__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
                   height="48"
@@ -112,8 +116,8 @@
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"
                   />
                 </svg>
-                <h3>Profesionalismo y Confianza</h3>
-                <p>
+                <h3 class="feature-card__title">Profesionalismo y Confianza</h3>
+                <p class="feature-card__text">
                   Somos un equipo profesional. Atención continua y
                   acompaniamiento permanente
                 </p>
@@ -121,7 +125,7 @@
 
               <div class="feature-card">
                 <svg
-                  class="feature-icon"
+                  class="feature-card__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
                   height="48"
@@ -135,8 +139,8 @@
                     d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"
                   />
                 </svg>
-                <h3>Diseño 100% Personalizado</h3>
-                <p>
+                <h3 class="feature-card__title">Diseño 100% Personalizado</h3>
+                <p class="feature-card__text">
                   Sitios personalizados, sin plantillas, con revisiones hasta
                   cumplir tus objetivos
                 </p>
@@ -147,10 +151,10 @@
               <a
                 href="https://wa.me/5491164627854?text=Hola%20*CO:DE*%20.Estoy%20interesado%20en%20crear%20una%20página%20web.%20¿Podrás%20pasarme%20más%20información?%20"
                 target="_blank"
-                class="btn btn-primary"
+                class="btn btn--primary"
               >
                 <svg
-                  class="btn-icon"
+                  class="btn__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -161,50 +165,48 @@
                     d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
                   />
                 </svg>
-                ¡Comenzá ahora!</a
-              >
-              <button class="btn btn-secondary">
-                <a href="#soluciones">Nuestras Soluciones</a>
-              </button>
+                ¡Comenzá ahora!
+              </a>
+              <a href="#soluciones" class="btn btn--secondary">
+                Nuestras Soluciones
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- MARQUEE SECTION -->
-
+      <!-- ===== MARQUEE SECTION ===== -->
       <section class="marquee">
-        <div class="marquee-content">
-          <span>DISEÑO WEB ➜</span>
-          <span>TIENDAS ONLINE ➜</span>
-          <span>DISEÑO WEB ➜</span>
-          <span>TIENDAS ONLINE ➜</span>
-          <span>DISEÑO WEB ➜</span>
-          <span>TIENDAS ONLINE ➜</span>
+        <div class="marquee__content">
+          <span class="marquee__text">DISEÑO WEB ➜</span>
+          <span class="marquee__text">TIENDAS ONLINE ➜</span>
+          <span class="marquee__text">DISEÑO WEB ➜</span>
+          <span class="marquee__text">TIENDAS ONLINE ➜</span>
+          <span class="marquee__text">DISEÑO WEB ➜</span>
+          <span class="marquee__text">TIENDAS ONLINE ➜</span>
         </div>
       </section>
 
-      <!-- WEB DESIGN SECTION -->
-
+      <!-- ===== WEB DESIGN SECTION ===== -->
       <section class="web-design" id="soluciones">
         <div class="container">
-          <div class="web-design-wrapper">
-            <div class="web-design-text">
+          <div class="web-design__wrapper">
+            <div class="web-design__text">
               <div class="section-label">
                 <img
                   src="./assets/img/logotipo/logo-sin-fondo.png"
                   alt="Logo"
-                  class="label-icon"
+                  class="section-label__icon"
                 />
-                <span>Diseño Web y Tiendas Online</span>
+                <span class="section-label__text">Diseño Web y Tiendas Online</span>
               </div>
 
-              <div class="web-design-info">
-                <h2>
+              <div>
+                <h2 class="web-design__title">
                   Sitios y Tiendas Webs Que Impulsan
                   <span class="text-primary">Tu Negocio</span>
                 </h2>
-                <p>
+                <p class="web-design__description">
                   Creamos sitios web 100% a medida, diseñados para atraer
                   clientes y potenciar tu marca en el mundo digital. Combinamos
                   diseño exclusivo, velocidad, seguridad y una experiencia de
@@ -213,56 +215,57 @@
                 </p>
 
                 <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">
-                      <span class="number-highlight">+160</span>
+                  <div class="stats-grid__item">
+                    <div class="stats-grid__number">
+                      <span class="stats-grid__number-highlight">+160</span>
                     </div>
-                    <div class="stat-label">Opiniones</div>
+                    <div class="stats-grid__label">Opiniones</div>
                   </div>
-                  <div class="stat-item">
-                    <div class="stat-number">
-                      <span class="number-highlight"
-                        >100<span class="symbol">%</span></span
-                      >
+                  <div class="stats-grid__item">
+                    <div class="stats-grid__number">
+                      <span class="stats-grid__number-highlight">100%</span>
                     </div>
-                    <div class="stat-label">Personalizado</div>
+                    <div class="stats-grid__label">Personalizado</div>
                   </div>
-                  <div class="stat-item">
-                    <div class="stat-number">
-                      <span class="number-highlight">+500</span>
+                  <div class="stats-grid__item">
+                    <div class="stats-grid__number">
+                      <span class="stats-grid__number-highlight">+500</span>
                     </div>
-                    <div class="stat-label">Proyectos</div>
+                    <div class="stats-grid__label">Proyectos</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="web-design-image">
+            <div class="web-design__image">
               <img
                 src="./assets/img/cards-diseno-web/UNA-PAUSA-scaled.png"
                 alt="Diseño Web"
+                class="web-design__image-img"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- WHY CHOOSE US SECTION -->
+      <!-- ===== WHY CHOOSE US SECTION ===== -->
       <section class="why-choose-us" id="quienes-somos">
         <div class="container">
-          <div class="why-choose-wrapper">
+          <div class="why-choose-us__wrapper">
             <div class="section-label">
               <img
                 src="./assets/img/logotipo/logo-sin-fondo.png"
                 alt="Logo"
-                class="label-icon"
+                class="section-label__icon"
               />
-              <span>Diseño Web y Tiendas Online</span>
+              <span class="section-label__text">Diseño Web y Tiendas Online</span>
             </div>
 
             <div class="why-title">
-              <h2>¿Por qué <span class="text-primary">Elegirnos?</span></h2>
-              <p>
+              <h2 class="why-choose-us__title">
+                ¿Por qué <span class="text-primary">Elegirnos?</span>
+              </h2>
+              <p class="why-choose-us__description">
                 Nos metemos de lleno en tu negocio, creamos algo a tu medida y
                 te acompañamos en cada paso hasta que el resultado sea realmente
                 tuyo
@@ -270,51 +273,55 @@
             </div>
 
             <section class="quienes-somos">
-              <div id="text-quienes-somos">
-                <div id="quienes-web">
-                  <h2>Somos<span class="color-quienes">CO:DE</span></h2>
-                  <p>
-                    <bold
-                      >Somos una empresa digital que transforma ideas en
-                      resultados.</bold
-                    >Ayudamos a empresas y profesionales a construir una
+              <div class="quienes-somos__text">
+                <div>
+                  <h2 class="quienes-somos__title">
+                    Somos <span class="text-primary">CO:DE</span>
+                  </h2>
+                  <p class="quienes-somos__description">
+                    <strong>Somos una empresa digital que transforma ideas en
+                      resultados.</strong>
+                    Ayudamos a empresas y profesionales a construir una
                     presencia online sólida, atraer clientes y hacer crecer su
                     negocio con estrategias efectivas y a medida.
                   </p>
                 </div>
 
-                <div id="button-web">
+                <div>
                   <a
                     href="https://wa.me/5491164627854?text=Hola%20*CO:DE*%20.Estoy%20interesado%20en%20crear%20una%20página%20web.%20¿Podrás%20pasarme%20más%20información?%20"
                     target="_blank"
-                    class="button-web"
+                    class="btn btn--primary btn--whatsapp"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-whatsapp"
                       viewBox="0 0 16 16"
                     >
                       <path
                         d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
                       />
                     </svg>
-                    <p>Comunicate por Whatsapp</p>
+                    Comunicate por Whatsapp
                   </a>
                 </div>
               </div>
 
-              <div id="img-quienes-somos">
-                <img src="./assets/img/cards/web-a-medida-1.jpg" />
+              <div class="quienes-somos__image">
+                <img
+                  src="./assets/img/cards/web-a-medida-1.jpg"
+                  alt="Web a medida"
+                  class="quienes-somos__image-img"
+                />
               </div>
             </section>
 
             <div class="benefits-grid">
               <article class="benefit-card">
                 <svg
-                  class="benefit-icon"
+                  class="benefit-card__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="56"
                   height="56"
@@ -325,8 +332,8 @@
                     d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
                   />
                 </svg>
-                <h3>Diseño 100% a Medida</h3>
-                <p>
+                <h3 class="benefit-card__title">Diseño 100% a Medida</h3>
+                <p class="benefit-card__text">
                   Sitios web únicos, sin plantillas genéricas, diseñados para
                   reflejar la identidad de tu marca y adaptarse a las
                   necesidades de tu negocio
@@ -335,7 +342,7 @@
 
               <article class="benefit-card">
                 <svg
-                  class="benefit-icon"
+                  class="benefit-card__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="56"
                   height="56"
@@ -346,8 +353,8 @@
                     d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
                   />
                 </svg>
-                <h3>Optimización Web</h3>
-                <p>
+                <h3 class="benefit-card__title">Optimización Web</h3>
+                <p class="benefit-card__text">
                   Sitios preparados para convertir visitas en clientes, con SEO
                   inicial, seguimiento integrado y una navegación pensada en la
                   experiencia.
@@ -356,7 +363,7 @@
 
               <article class="benefit-card">
                 <svg
-                  class="benefit-icon"
+                  class="benefit-card__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="56"
                   height="56"
@@ -367,8 +374,8 @@
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"
                   />
                 </svg>
-                <h3>Propiedad Total y Soporte Garantizado</h3>
-                <p>
+                <h3 class="benefit-card__title">Propiedad Total y Soporte Garantizado</h3>
+                <p class="benefit-card__text">
                   Tu sitio web es 100% tuyo, con panel autoadministrable y
                   soporte continuo después del lanzamiento.
                 </p>
@@ -378,27 +385,27 @@
         </div>
       </section>
 
-      <!-- WHATS INCLUDED SECTION -->
-
-      <section class="what-included" id="#soluciones">
+      <!-- ===== WHAT'S INCLUDED SECTION ===== -->
+      <section class="what-included">
         <div class="container">
-          <div class="what-included-wrapper">
-            <div class="section-title">
-              <h2>¿Qué incluye tu <span class="text-primary">Web?</span></h2>
-              <p>
+          <div class="what-included__wrapper">
+            <div class="what-included__header">
+              <h2 class="what-included__title">
+                ¿Qué incluye tu <span class="text-primary">Web?</span>
+              </h2>
+              <p class="what-included__description">
                 Impulsamos tu negocio con un sitio web diseñado para transformar
                 visitas en clientes
               </p>
             </div>
 
             <div class="features-layout">
-              <!-- LISTA DE CARACTERISTICAS COLUMNA IZQUIERDA -->
-
+              <!-- COLUMNA IZQUIERDA - LISTA DE CARACTERÍSTICAS -->
               <div class="features-column">
                 <div class="features-list">
                   <div class="feature-item">
                     <svg
-                      class="item-icon"
+                      class="feature-item__icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -409,16 +416,17 @@
                         d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
                       />
                     </svg>
-
-                    <div class="item-content">
-                      <h4>Diseño exclusivo</h4>
-                      <p>→ Sitios 100% a medida, sin plantillas</p>
+                    <div class="feature-item__content">
+                      <h4 class="feature-item__title">Diseño exclusivo</h4>
+                      <p class="feature-item__text">
+                        → Sitios 100% a medida, sin plantillas
+                      </p>
                     </div>
                   </div>
 
                   <div class="feature-item">
                     <svg
-                      class="item-icon"
+                      class="feature-item__icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -429,16 +437,17 @@
                         d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"
                       />
                     </svg>
-
-                    <div class="item-content">
-                      <h4>Pago único</h4>
-                      <p>→ Sin costos mensuales ni dependencias</p>
+                    <div class="feature-item__content">
+                      <h4 class="feature-item__title">Pago único</h4>
+                      <p class="feature-item__text">
+                        → Sin costos mensuales ni dependencias
+                      </p>
                     </div>
                   </div>
 
                   <div class="feature-item">
                     <svg
-                      class="item-icon"
+                      class="feature-item__icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -449,15 +458,17 @@
                         d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
                       />
                     </svg>
-                    <div class="item-content">
-                      <h4>100% tuyo</h4>
-                      <p>→ Propiedad total del sitio</p>
+                    <div class="feature-item__content">
+                      <h4 class="feature-item__title">100% tuyo</h4>
+                      <p class="feature-item__text">
+                        → Propiedad total del sitio
+                      </p>
                     </div>
                   </div>
 
                   <div class="feature-item">
                     <svg
-                      class="item-icon"
+                      class="feature-item__icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -468,15 +479,17 @@
                         d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"
                       />
                     </svg>
-                    <div class="item-content">
-                      <h4>Panel Administrable</h4>
-                      <p>→ Editá banners, imágenes y textos</p>
+                    <div class="feature-item__content">
+                      <h4 class="feature-item__title">Panel Administrable</h4>
+                      <p class="feature-item__text">
+                        → Editá banners, imágenes y textos
+                      </p>
                     </div>
                   </div>
 
                   <div class="feature-item">
                     <svg
-                      class="item-icon"
+                      class="feature-item__icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -487,9 +500,9 @@
                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
                       />
                     </svg>
-                    <div class="item-content">
-                      <h4>Lanzamiento completo</h4>
-                      <p>
+                    <div class="feature-item__content">
+                      <h4 class="feature-item__title">Lanzamiento completo</h4>
+                      <p class="feature-item__text">
                         → Incluye SEO inicial, Analytics, Pixel, hosting,
                         dominio, SSL Y 15 días de soporte
                       </p>
@@ -500,10 +513,10 @@
                 <a
                   href="https://wa.me/5491164627854?text=Hola%20*CO:DE*%20.Estoy%20interesado%20en%20crear%20una%20página%20web.%20¿Podrás%20pasarme%20más%20información?%20"
                   target="_blank"
-                  class="btn btn-primary btn-full"
+                  class="btn btn--primary btn--full"
                 >
                   <svg
-                    class="btn-icon"
+                    class="btn__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
@@ -518,12 +531,11 @@
                 </a>
               </div>
 
-              <!-- COLUMNA DERECHA CARDS -->
-
+              <!-- COLUMNA DERECHA - CARDS -->
               <div class="cards-column">
                 <div class="card-item">
                   <svg
-                    class="card-icon"
+                    class="card-item__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="56"
                     height="56"
@@ -534,13 +546,13 @@
                       d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"
                     />
                   </svg>
-                  <h3>Diseño Exclusivo</h3>
-                  <p>Sitios a medida, sin plantillas, 100% tuyos.</p>
+                  <h3 class="card-item__title">Diseño Exclusivo</h3>
+                  <p class="card-item__text">Sitios a medida, sin plantillas, 100% tuyos.</p>
                 </div>
 
                 <div class="card-item">
                   <svg
-                    class="card-icon"
+                    class="card-item__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="56"
                     height="56"
@@ -551,13 +563,15 @@
                       d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
                     />
                   </svg>
-                  <h3>Garantía</h3>
-                  <p>Si no cumplimos te devolvemos el dinero</p>
+                  <h3 class="card-item__title">Garantía</h3>
+                  <p class="card-item__text">
+                    Si no cumplimos te devolvemos el dinero
+                  </p>
                 </div>
 
                 <div class="card-item">
                   <svg
-                    class="card-icon"
+                    class="card-item__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="56"
                     height="56"
@@ -568,13 +582,15 @@
                       d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"
                     />
                   </svg>
-                  <h3>Gestión y Soporte</h3>
-                  <p>Panel autoadministrable y 15 días de soporte</p>
+                  <h3 class="card-item__title">Gestión y Soporte</h3>
+                  <p class="card-item__text">
+                    Panel autoadministrable y 15 días de soporte
+                  </p>
                 </div>
 
                 <div class="card-item">
                   <svg
-                    class="card-icon"
+                    class="card-item__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="56"
                     height="56"
@@ -585,8 +601,10 @@
                       d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
                     />
                   </svg>
-                  <h3>Pack Inicial sin Costos</h3>
-                  <p>Incluye hosting, dominio y SSL por 1 año</p>
+                  <h3 class="card-item__title">Pack Inicial sin Costos</h3>
+                  <p class="card-item__text">
+                    Incluye hosting, dominio y SSL por 1 año
+                  </p>
                 </div>
               </div>
             </div>
@@ -594,34 +612,34 @@
         </div>
       </section>
 
-      <!-- SECCION DE IMPUlSO DE PRESENCIA -->
-
+      <!-- ===== BOOST PRESENCE SECTION ===== -->
       <section class="boost-presence">
         <div class="container">
-          <div class="boost-wrapper">
-            <div class="boost-image">
+          <div class="boost-presence__wrapper">
+            <div class="boost-presence__image">
               <img
                 src="./assets/img/cards/impulsar-negocio-digital.png"
                 alt="Presencia Digital"
+                class="boost-presence__image-img"
               />
             </div>
 
-            <div class="boost-text">
+            <div class="boost-presence__text">
               <div class="section-label">
                 <img
                   src="./assets/img/logotipo/logo-sin-fondo.png"
                   alt="Logo"
-                  class="label-icon"
+                  class="section-label__icon"
                 />
-                <span>Diseño Web</span>
+                <span class="section-label__text">Diseño Web</span>
               </div>
 
-              <div class="boost-info">
-                <h2>
+              <div>
+                <h2 class="boost-presence__title">
                   Impulsamos tu
                   <span class="text-primary">Presencia Digital</span>
                 </h2>
-                <p>
+                <p class="boost-presence__description">
                   Desarrollamos sitios web seguros, intuitivos y optimizados
                   para atraer clientes y posicionar tu empresa en el mundo
                   digital
@@ -630,7 +648,7 @@
                 <div class="pricing-section">
                   <div class="pricing-item">
                     <svg
-                      class="pricing-icon"
+                      class="pricing-item__icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="32"
                       height="32"
@@ -642,8 +660,8 @@
                       />
                     </svg>
                     <div>
-                      <h4>Pagos</h4>
-                      <p>
+                      <h4 class="pricing-item__title">Pagos</h4>
+                      <p class="pricing-item__text">
                         → 1 pago con 20% OFF: abonando en efectivo o
                         transferencia.
                       </p>
@@ -652,7 +670,7 @@
 
                   <div class="pricing-item">
                     <svg
-                      class="pricing-icon"
+                      class="pricing-item__icon"
                       xmlns="http://www.w3.org/2000/svg"
                       width="32"
                       height="32"
@@ -664,8 +682,10 @@
                       />
                     </svg>
                     <div>
-                      <h4>Entrega</h4>
-                      <p>→ Tené tu sitio web en solo 15 días hábiles</p>
+                      <h4 class="pricing-item__title">Entrega</h4>
+                      <p class="pricing-item__text">
+                        → Tené tu sitio web en solo 15 días hábiles
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -673,10 +693,10 @@
                 <a
                   href="https://wa.me/5491164627854?text=Hola%20*CO:DE*%20.Estoy%20interesado%20en%20crear%20una%20página%20web.%20¿Podrás%20pasarme%20más%20información?%20"
                   target="_blank"
-                  class="btn btn-primary"
+                  class="btn btn--primary"
                 >
                   <svg
-                    class="btn-icon"
+                    class="btn__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
@@ -684,7 +704,7 @@
                     viewBox="0 0 16 16"
                   >
                     <path
-                      d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                      d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.5 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
                     />
                   </svg>
                   Comunicate por Whatsapp
@@ -695,18 +715,17 @@
         </div>
       </section>
 
-      <!-- SECCION PLATAFORMAS -->
-
+      <!-- ===== PLATFORMS SECTION ===== -->
       <section class="platforms">
         <div class="container">
           <h2 class="section-heading">
             Soluciones Personalizadas para Necesidades Avanzadas
           </h2>
 
-          <div class="platforms-grid">
+          <div class="platforms__grid">
             <article class="platform-card">
               <svg
-                class="platform-icon"
+                class="platform-card__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
                 height="48"
@@ -720,19 +739,19 @@
                   d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"
                 />
               </svg>
-              <h3>E-learning</h3>
-              <p>
+              <h3 class="platform-card__title">E-learning</h3>
+              <p class="platform-card__text">
                 Soluciones para cursos online con gestión de usuarios, pagos y
                 accesos
               </p>
-              <a href="#" class="link-more"
-                >Conocé Más <span class="arrow">➜</span></a
-              >
+              <a href="#" class="link-more">
+                Conocé Más <span class="link-more__arrow">➜</span>
+              </a>
             </article>
 
             <article class="platform-card">
               <svg
-                class="platform-icon"
+                class="platform-card__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
                 height="48"
@@ -746,19 +765,19 @@
                   d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.386 1.46c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"
                 />
               </svg>
-              <h3>Inmobiliaria</h3>
-              <p>
+              <h3 class="platform-card__title">Inmobiliaria</h3>
+              <p class="platform-card__text">
                 Sitios web para publicar propiedades con búsqueda filtrada y
                 contacto
               </p>
-              <a href="#" class="link-more"
-                >Conocé Más<span class="arrow">➜</span></a
-              >
+              <a href="#" class="link-more">
+                Conocé Más <span class="link-more__arrow">➜</span>
+              </a>
             </article>
 
             <article class="platform-card">
               <svg
-                class="platform-icon"
+                class="platform-card__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
                 height="48"
@@ -770,19 +789,19 @@
                   d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"
                 />
               </svg>
-              <h3>Directorio</h3>
-              <p>
+              <h3 class="platform-card__title">Directorio</h3>
+              <p class="platform-card__text">
                 Portales de profesionales con perfiles detallados y buscador
                 interno
               </p>
-              <a href="#" class="link-more"
-                >Conocé Más <span class="arrow">➜</span></a
-              >
+              <a href="#" class="link-more">
+                Conocé Más <span class="link-more__arrow">➜</span>
+              </a>
             </article>
 
             <article class="platform-card">
               <svg
-                class="platform-icon"
+                class="platform-card__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
                 height="48"
@@ -796,21 +815,20 @@
                   d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
                 />
               </svg>
-              <h3>Eventos</h3>
-              <p>
+              <h3 class="platform-card__title">Eventos</h3>
+              <p class="platform-card__text">
                 Plataformas para gestionar eventos y vender entradas de manera
                 online
               </p>
-              <a href="#" class="link-more"
-                >Conocé Más<span class="arrow">➜</span></a
-              >
+              <a href="#" class="link-more">
+                Conocé Más <span class="link-more__arrow">➜</span>
+              </a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- SECCION TECNOLOGIAS -->
-
+      <!-- ===== TECHNOLOGIES SECTION ===== -->
       <section class="technologies">
         <div class="container">
           <h2 class="section-heading">
@@ -820,52 +838,72 @@
             <img
               src="./assets/img/iconos-plataformas/vscode.png"
               alt="VS Code"
+              class="tech-logos__item"
             />
-            <img src="./assets/img/iconos-plataformas/html.png" alt="HTML" />
-            <img src="./assets/img/iconos-plataformas/css.png" alt="CSS" />
+            <img
+              src="./assets/img/iconos-plataformas/html.png"
+              alt="HTML"
+              class="tech-logos__item"
+            />
+            <img
+              src="./assets/img/iconos-plataformas/css.png"
+              alt="CSS"
+              class="tech-logos__item"
+            />
             <img
               src="./assets/img/iconos-plataformas/javascript.png"
               alt="JavaScript"
+              class="tech-logos__item"
             />
-            <img src="./assets/img/iconos-plataformas/react.png" alt="React" />
-            <img src="./assets/img/iconos-plataformas/php.png" alt="PHP" />
+            <img
+              src="./assets/img/iconos-plataformas/react.png"
+              alt="React"
+              class="tech-logos__item"
+            />
+            <img
+              src="./assets/img/iconos-plataformas/php.png"
+              alt="PHP"
+              class="tech-logos__item"
+            />
             <img
               src="./assets/img/iconos-plataformas/wordpress.png"
               alt="WordPress"
+              class="tech-logos__item"
             />
             <img
               src="./assets/img/iconos-plataformas/elementor.png"
               alt="Elementor"
+              class="tech-logos__item"
             />
             <img
               src="./assets/img/iconos-plataformas/woocommerce.png"
               alt="WooCommerce"
+              class="tech-logos__item"
             />
           </div>
         </div>
       </section>
 
-      <!-- SECCION CONTACTO -->
-
+      <!-- ===== CONTACT SECTION ===== -->
       <section class="contact-section" id="contacto">
         <div class="container">
-          <div class="contact-wrapper">
-            <div class="contact-info">
+          <div class="contact-section__wrapper">
+            <div class="contact-section__info">
               <div class="section-label">
                 <img
                   src="./assets/img/logotipo/logo-sin-fondo.png"
                   alt="Logo"
-                  class="label-icon"
+                  class="section-label__icon"
                 />
-                <span>Diseño Web</span>
+                <span class="section-label__text">Diseño Web</span>
               </div>
 
-              <div class="contact-content">
-                <h2>
+              <div>
+                <h2 class="contact-section__title">
                   ¿Listo para tener un sitio web que
                   <span class="text-primary">marca la diferencia?</span>
                 </h2>
-                <p>
+                <p class="contact-section__description">
                   Dejanos tu mensaje a través del formulario, o comunicate a
                   nuestro WhatsApp
                 </p>
@@ -873,10 +911,10 @@
                 <a
                   href="https://wa.me/5491164627854?text=Hola%20*CO:DE*%20.Estoy%20interesado%20en%20crear%20una%20página%20web.%20¿Podrás%20pasarme%20más%20información?%20"
                   target="_blank"
-                  class="btn btn-primary"
+                  class="btn btn--primary"
                 >
                   <svg
-                    class="btn-icon"
+                    class="btn__icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
@@ -895,23 +933,29 @@
             <form class="contact-form" method="POST" action="#">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Nombre<span>*</span></label>
+                  <label for="name" class="form-group__label">
+                    Nombre <span class="form-group__label--required">*</span>
+                  </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     placeholder="Introduce tu Nombre"
+                    class="form-group__input"
                     required
                   />
                 </div>
 
                 <div class="form-group">
-                  <label for="lastname">Apellido<span>*</span></label>
+                  <label for="lastname" class="form-group__label">
+                    Apellido <span class="form-group__label--required">*</span>
+                  </label>
                   <input
                     type="text"
                     id="lastname"
                     name="lastname"
                     placeholder="Introduce tu Apellido"
+                    class="form-group__input"
                     required
                   />
                 </div>
@@ -919,38 +963,47 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="email">Correo Electrónico <span>*</span></label>
+                  <label for="email" class="form-group__label">
+                    Correo Electrónico
+                    <span class="form-group__label--required">*</span>
+                  </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Correo Electrónico"
+                    class="form-group__input"
                     required
                   />
                 </div>
 
                 <div class="form-group">
-                  <label for="phone">Teléfono de Contacto <span>*</span></label>
+                  <label for="phone" class="form-group__label">
+                    Teléfono de Contacto
+                    <span class="form-group__label--required">*</span>
+                  </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     placeholder="Teléfono de Contacto"
+                    class="form-group__input"
                     required
                   />
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="message">Mensaje</label>
+                <label for="message" class="form-group__label">Mensaje</label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="¿En qué te podemos ayudar?"
+                  class="form-group__textarea"
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-full">
+              <button type="submit" class="btn btn--primary btn--full">
                 Enviar
               </button>
             </form>
@@ -959,31 +1012,32 @@
       </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col footer-brand-col">
+        <div class="footer__grid">
+          <div class="footer__col">
             <img
               src="./assets/img/logotipo/logotipo-code-horizonta-sin-fondo.png"
               alt="CO:DE Logo"
-              class="footer-logo"
+              class="footer__logo"
             />
-            <p>
+            <p class="footer__text">
               Diseñamos la imagen digital de tu negocio y te ayudamos a conectar
               con nuevos clientes
             </p>
           </div>
 
-          <div class="footer-col">
-            <h3>Contactanos</h3>
+          <div class="footer__col">
+            <h3 class="footer__title">Contactanos</h3>
             <div class="footer-contacts">
               <a
                 href="https://wa.me/5491164627854?text=Hola%20*CO:DE*%20.Estoy%20interesado%20en%20crear%20una%20página%20web.%20¿Podrás%20pasarme%20más%20información?%20"
                 target="_blank"
-                class="contact-link"
+                class="footer__link"
               >
                 <svg
-                  class="contact-icon"
+                  class="footer__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -996,9 +1050,9 @@
                 </svg>
                 +54 11 6462 7854
               </a>
-              <a href="mailto:vureta89@gmail.com" class="contact-link">
+              <a href="mailto:vureta89@gmail.com" class="footer__link">
                 <svg
-                  class="contact-icon"
+                  class="footer__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
@@ -1014,18 +1068,18 @@
             </div>
           </div>
 
-          <div class="footer-col">
-            <h3>Links de interés</h3>
-            <ul class="footer-links">
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#nosotros">Nosotros</a></li>
-              <li><a href="#soluciones">Servicios</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+          <div class="footer__col">
+            <h3 class="footer__title">Links de interés</h3>
+            <ul class="footer__links">
+              <li><a href="#inicio" class="footer__link">Inicio</a></li>
+              <li><a href="#quienes-somos" class="footer__link">Nosotros</a></li>
+              <li><a href="#soluciones" class="footer__link">Servicios</a></li>
+              <li><a href="#contacto" class="footer__link">Contacto</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer__bottom">
           <p>&copy; 2026 CO:DE Developer. Todos los derechos reservados.</p>
         </div>
       </div>
