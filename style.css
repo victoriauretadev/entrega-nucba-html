@@ -124,8 +124,8 @@ body {
   color: var(--color-light);
   text-decoration: none;
   font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 0.5px;
   position: relative;
   transition: var(--transition);
@@ -201,10 +201,10 @@ body {
 
 .btn {
   font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   border: 2px solid transparent;
-  padding: 11px 25px;
+  padding: 14px 32px;
   cursor: pointer;
   border-radius: var(--radius-lg);
   transition: var(--transition);
@@ -254,9 +254,10 @@ body {
 .btn-register {
   background-color: var(--color-primary);
   color: var(--color-dark);
-  padding: 5px 25px;
-  font-size: 14px;
+  padding: 10px 28px;
+  font-size: 15px;
   border-radius: var(--radius-lg);
+  font-weight: 600;
 }
 
 .btn-login:hover,
@@ -266,8 +267,8 @@ body {
 }
 
 .btn-icon {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   text-decoration: none;
   font-family: var(--font-secondary);
@@ -293,25 +294,26 @@ body {
 }
 
 .label-icon {
-  width: 60px;
+  width: 70px;
   height: auto;
 }
 
 .section-label span {
   font-family: var(--font-primary);
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
 .section-heading {
   font-family: var(--font-primary);
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 42px;
+  font-weight: 600;
   text-align: center;
   margin-bottom: var(--spacing-2xl);
   color: var(--color-light);
   letter-spacing: 0.5px;
+  line-height: 1.3;
 }
 
 /* ===================================
@@ -337,11 +339,11 @@ body {
   background-color: rgba(52, 42, 64, 0.5);
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
-  padding: 11px 40px;
+  padding: 14px 44px;
   border-radius: var(--radius-lg);
   font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   margin-bottom: var(--spacing-lg);
   transition: var(--transition);
   letter-spacing: 0.5px;
@@ -354,17 +356,17 @@ body {
 
 .hero h1 {
   font-family: var(--font-primary);
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 56px;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-lg);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.7;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
   margin-bottom: var(--spacing-2xl);
   color: var(--color-light);
 }
@@ -393,8 +395,8 @@ body {
 }
 
 .feature-icon {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   color: var(--color-primary);
   margin: 0 auto var(--spacing-md);
   transition: var(--transition);
@@ -406,16 +408,16 @@ body {
 
 .feature-card h3 {
   font-family: var(--font-primary);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: var(--spacing-sm);
   color: var(--color-light);
   letter-spacing: 0.5px;
 }
 
 .feature-card p {
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 15px;
+  font-weight: 300;
   line-height: 1.6;
   color: var(--color-light);
 }
@@ -433,7 +435,7 @@ body {
 
 .marquee {
   background: linear-gradient(90deg, var(--color-primary), #c77dff);
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-lg) 0;
   overflow: hidden;
   margin: var(--spacing-2xl) 0;
 }
@@ -448,7 +450,7 @@ body {
   margin: 0 40px;
   font-family: var(--font-primary);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   flex-shrink: 0;
   letter-spacing: 1px;
@@ -486,17 +488,17 @@ body {
 
 .web-design-info h2 {
   font-family: var(--font-primary);
-  font-size: 30px;
+  font-size: 42px;
   font-weight: 600;
   margin-bottom: var(--spacing-md);
   line-height: 1.2;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
 }
 
 .web-design-info p {
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 1.7;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
   margin-bottom: var(--spacing-lg);
 }
 
@@ -518,26 +520,26 @@ body {
 
 .stat-number {
   font-family: var(--font-primary);
-  font-size: 38px;
-  font-weight: 500;
+  font-size: 44px;
+  font-weight: 700;
   margin-bottom: var(--spacing-sm);
   letter-spacing: 1px;
 }
 
 .number-highlight {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .symbol {
   color: var(--color-primary);
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .stat-label {
   font-family: var(--font-primary);
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 
@@ -576,17 +578,18 @@ body {
 
 .why-title h2 {
   font-family: var(--font-primary);
-  font-size: 35px;
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: var(--spacing-md);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
 }
 
 .why-title p {
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 1.7;
-  max-width: 600px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -599,8 +602,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 40px 20px;
+  gap: 60px;
+  padding: 60px 20px;
   background: linear-gradient(
     135deg,
     #f3f3f3 0%,
@@ -660,19 +663,19 @@ body {
 #quienes-web {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 #quienes-web h2 {
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 44px;
+  font-weight: 700;
   color: #05060a;
   margin: 0;
   padding: 0;
   line-height: 1.2;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
   background: linear-gradient(135deg, #05060a 0%, #05060a 50%, #a34ae8 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -692,8 +695,8 @@ body {
 
 #quienes-web p {
   font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 200;
+  font-size: 17px;
+  font-weight: 300;
   color: #05060a;
   margin: 0;
   padding: 0;
@@ -703,11 +706,12 @@ body {
 
 #quienes-web p bold {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #a34ae8;
   letter-spacing: 0.3px;
+  font-size: 17px;
 }
 
 #button-web {
@@ -721,15 +725,15 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 12px 28px;
+  gap: 12px;
+  padding: 14px 32px;
   background: linear-gradient(135deg, #a34ae8 0%, #7c3aed 100%);
   color: #ededed;
   border: none;
   border-radius: 25px 0 25px 0;
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.5px;
@@ -738,7 +742,6 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(163, 74, 232, 0.2);
   text-decoration: none;
-  font-family: var(--font-secondary);
 }
 
 .button-web::before {
@@ -772,8 +775,8 @@ body {
 }
 
 .button-web svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -787,7 +790,7 @@ body {
 .button-web p {
   margin: 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 15px;
   transition: all 0.3s ease;
 }
 
@@ -905,8 +908,8 @@ body {
 }
 
 .benefit-icon {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
   transition: var(--transition);
@@ -918,17 +921,17 @@ body {
 
 .benefit-card h3 {
   font-family: var(--font-primary);
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: var(--spacing-sm);
   color: var(--color-text-dark);
   letter-spacing: 0.5px;
 }
 
 .benefit-card p {
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 1.6;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
   color: var(--color-text-dark);
 }
 
@@ -954,16 +957,17 @@ body {
 
 .section-title h2 {
   font-family: var(--font-primary);
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 42px;
+  font-weight: 700;
   margin-bottom: var(--spacing-md);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
 }
 
 .section-title p {
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 1.7;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 .features-layout {
@@ -989,7 +993,7 @@ body {
   gap: var(--spacing-md);
   align-items: flex-start;
   transition: var(--transition);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-md);
   border-radius: var(--radius-sm);
 }
 
@@ -998,8 +1002,8 @@ body {
 }
 
 .item-icon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   color: var(--color-primary);
   flex-shrink: 0;
   margin-top: 2px;
@@ -1016,16 +1020,16 @@ body {
 
 .feature-item h4 {
   font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 4px;
   color: var(--color-text-dark);
   letter-spacing: 0.5px;
 }
 
 .feature-item p {
-  font-size: 13px;
-  font-weight: 200;
+  font-size: 14px;
+  font-weight: 300;
   color: var(--color-text-dark);
 }
 
@@ -1053,8 +1057,8 @@ body {
 }
 
 .card-icon {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   color: var(--color-primary);
   margin: 0 auto var(--spacing-md);
   transition: var(--transition);
@@ -1066,17 +1070,17 @@ body {
 
 .card-item h3 {
   font-family: var(--font-primary);
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: var(--spacing-sm);
   color: var(--color-text-dark);
   letter-spacing: 0.5px;
 }
 
 .card-item p {
-  font-size: 13px;
-  font-weight: 200;
-  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
   color: var(--color-text-dark);
 }
 
@@ -1116,17 +1120,17 @@ body {
 
 .boost-info h2 {
   font-family: var(--font-primary);
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 42px;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
 }
 
 .boost-info p {
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 1.7;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
   margin-bottom: var(--spacing-lg);
 }
 
@@ -1153,23 +1157,23 @@ body {
 }
 
 .pricing-icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   color: var(--color-primary);
   flex-shrink: 0;
 }
 
 .pricing-item h4 {
   font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 4px;
   letter-spacing: 0.5px;
 }
 
 .pricing-item p {
-  font-size: 13px;
-  font-weight: 200;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 /* ===================================
@@ -1208,8 +1212,8 @@ body {
 }
 
 .platform-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
   transition: var(--transition);
@@ -1221,17 +1225,17 @@ body {
 
 .platform-card h3 {
   font-family: var(--font-primary);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: var(--spacing-sm);
   color: var(--color-light);
   letter-spacing: 0.5px;
 }
 
 .platform-card p {
-  font-size: 13px;
-  font-weight: 200;
-  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
   margin-bottom: var(--spacing-lg);
   color: var(--color-light);
 }
@@ -1239,8 +1243,8 @@ body {
 .link-more {
   color: var(--color-light);
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 200;
+  font-size: 14px;
+  font-weight: 400;
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
@@ -1254,7 +1258,7 @@ body {
 
 .arrow {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ===================================
@@ -1283,7 +1287,7 @@ body {
 }
 
 .tech-logos img {
-  height: 60px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);
@@ -1312,17 +1316,17 @@ body {
 
 .contact-content h2 {
   font-family: var(--font-primary);
-  font-size: 35px;
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: var(--spacing-md);
-  line-height: 1.2;
-  letter-spacing: 0.5px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
 }
 
 .contact-content p {
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 1.7;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
   margin-bottom: var(--spacing-lg);
 }
 
@@ -1350,15 +1354,15 @@ body {
 
 .form-group label {
   font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--color-light);
   letter-spacing: 0.5px;
 }
 
 .form-group label span {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .form-group input,
@@ -1369,7 +1373,7 @@ body {
   padding: var(--spacing-sm);
   color: var(--color-light);
   font-family: var(--font-secondary);
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
   transition: var(--transition);
   letter-spacing: 0.5px;
@@ -1437,16 +1441,16 @@ body {
 }
 
 .footer-brand-col p {
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 1.6;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
   color: var(--color-light);
 }
 
 .footer-col h3 {
   font-family: var(--font-primary);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-primary);
   letter-spacing: 0.5px;
 }
@@ -1463,8 +1467,8 @@ body {
   gap: var(--spacing-sm);
   color: var(--color-light);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 15px;
+  font-weight: 300;
   transition: var(--transition);
 }
 
@@ -1495,8 +1499,8 @@ body {
 .footer-links a {
   color: var(--color-light);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 15px;
+  font-weight: 300;
   transition: var(--transition);
   display: inline-block;
   padding: 4px 0;
@@ -1511,8 +1515,8 @@ body {
   text-align: center;
   padding-top: var(--spacing-lg);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 12px;
-  font-weight: 200;
+  font-size: 13px;
+  font-weight: 300;
   color: rgba(237, 237, 237, 0.6);
   letter-spacing: 0.5px;
 }
@@ -1533,7 +1537,7 @@ body {
 .auth-buttons-mobile a {
   width: 100%;
   padding: 12px 20px;
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
   display: block;
   font-family: var(--font-primary);
@@ -1542,9 +1546,10 @@ body {
 .auth-buttons-mobile .btn-login,
 .auth-buttons-mobile .btn-register {
   width: 100%;
-  padding: 12px 20px;
-  font-size: 13px;
+  padding: 14px 20px;
+  font-size: 14px;
   border: none;
+  font-weight: 600;
 }
 
 /* ===================================
@@ -1583,14 +1588,14 @@ body {
   }
 
   #quienes-web h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
 @media (max-width: 1024px) {
   .quienes-somos {
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     padding: 80px 20px;
   }
 
@@ -1600,10 +1605,11 @@ body {
 
   #img-quienes-somos {
     width: 100%;
+    max-width: 500px;
   }
 
   #quienes-web h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   #img-quienes-somos img {
@@ -1656,7 +1662,7 @@ body {
 
   .nav-menu a {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     padding: 15px 0;
     text-decoration: none;
     color: var(--color-light);
@@ -1678,7 +1684,7 @@ body {
 
 @media (max-width: 768px) {
   .logo img {
-    width: 150px;
+    width: 160px;
     height: auto;
   }
 
@@ -1687,17 +1693,31 @@ body {
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 42px;
+    font-weight: 700;
   }
 
   .hero-subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .badge {
     font-size: 14px;
   }
 
   .section-title h2,
   .why-title h2,
-  .contact-content h2 {
-    font-size: 24px;
+  .contact-content h2,
+  .section-heading {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .why-title p,
+  .section-title p,
+  .contact-content p {
+    font-size: 16px;
   }
 
   .cta-buttons {
@@ -1719,8 +1739,18 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .section-heading {
-    font-size: 24px;
+  .feature-card h3,
+  .benefit-card h3,
+  .platform-card h3,
+  .card-item h3 {
+    font-size: 18px;
+  }
+
+  .feature-card p,
+  .benefit-card p,
+  .platform-card p,
+  .card-item p {
+    font-size: 15px;
   }
 
   .quienes-somos {
@@ -1749,20 +1779,47 @@ body {
   }
 
   #quienes-web h2 {
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: 700;
   }
 
   #quienes-web p {
-    font-size: 14px;
-  }
-
-  .web-design-info h2,
-  .boost-info h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   #img-quienes-somos {
     width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  #img-quienes-somos img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .web-design-info h2,
+  .boost-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .web-design-info p,
+  .boost-info p {
+    font-size: 16px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  .button-web {
+    font-size: 14px;
+    padding: 12px 28px;
+  }
+
+  .tech-logos img {
+    height: 60px;
   }
 }
 
@@ -1790,7 +1847,7 @@ body {
   }
 
   .nav-menu a {
-    font-size: 13px;
+    font-size: 14px;
     padding: 12px 0;
   }
 
@@ -1801,7 +1858,7 @@ body {
 
   .auth-buttons-mobile a {
     padding: 10px 15px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .hero {
@@ -1809,25 +1866,63 @@ body {
   }
 
   .hero h1 {
-    font-size: 22px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
   }
 
   .hero-subtitle {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .badge {
     font-size: 12px;
-    padding: 8px 20px;
+    padding: 10px 20px;
   }
 
-  .section-title h2 {
-    font-size: 20px;
+  .section-heading,
+  .section-title h2,
+  .why-title h2,
+  .contact-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .why-title p,
+  .section-title p,
+  .contact-content p {
+    font-size: 14px;
   }
 
   .btn {
-    font-size: 12px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+
+  .feature-card h3,
+  .benefit-card h3,
+  .platform-card h3,
+  .card-item h3 {
+    font-size: 16px;
+  }
+
+  .feature-card p,
+  .benefit-card p,
+  .platform-card p,
+  .card-item p {
+    font-size: 13px;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .benefit-icon,
+  .card-icon {
+    width: 48px;
+    height: 48px;
   }
 
   .tech-logos {
@@ -1864,36 +1959,104 @@ body {
   }
 
   #quienes-web h2 {
-    font-size: 22px;
-    line-height: 1.1;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #05060a 0%, #05060a 60%, #a34ae8 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   #quienes-web p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
   }
 
   #quienes-web p bold {
+    font-size: 14px;
     margin-bottom: 8px;
   }
 
   #button-web {
-    margin-top: 10px;
+    margin-top: 12px;
+    width: 100%;
   }
 
   .button-web {
     width: 100%;
-    padding: 10px 20px;
-    font-size: 11px;
+    font-size: 13px;
+    padding: 12px 20px;
     justify-content: center;
   }
 
   .button-web svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .button-web p {
+    font-size: 13px;
+  }
+
+  #img-quienes-somos {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
   }
 
   #img-quienes-somos img {
-    border-radius: 6px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(163, 74, 232, 0.3);
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .web-design-info h2,
+  .boost-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .web-design-info p,
+  .boost-info p {
+    font-size: 14px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+
+  .stat-label,
+  .item-content h4 {
+    font-size: 13px;
+  }
+
+  .item-content p {
+    font-size: 12px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .contact-link {
+    font-size: 14px;
+  }
+
+  .footer-brand-col p {
+    font-size: 14px;
+  }
+
+  .footer-links a,
+  .footer-col h3 {
+    font-size: 14px;
   }
 }
